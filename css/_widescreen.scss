@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1500px) {
+  .container {
+    max-width: 75%;
+  }
+
+  #our-services {
+    .our-services-a {
+      .btn {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  #contact-us .contact-us-content .contact-us-text {
+    padding: 2rem;
+    padding-top: 15%;
+  }
+
+}

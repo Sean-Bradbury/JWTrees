@@ -1,0 +1,257 @@
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 300px;
+    padding: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  // Header
+  header {
+    #main-nav {
+      width: 100%;
+      top: 0;
+      height: 110px;
+
+      .nav-content {
+        flex-direction: column;
+        margin: 0;
+
+        .logo {
+          width: 180px;
+          align-self: center;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        ul {
+          top: 0px;
+          display: grid;
+          grid-template-columns: 1fr;
+
+          li {
+            padding: 0.5rem;
+            border-bottom: 1px dotted lightgray;
+            padding: 1rem;
+            width: 90%;
+
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+
+        .menu-wrap {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1;
+
+          .menu {
+            position: fixed;
+            top: 110px;
+            width: 100%;
+            height: 370px;
+            visibility: hidden;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+          }
+
+          .toggler {
+            display: inline-block;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 1002;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+
+            // Menu Visibility
+            &:checked~.menu {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+
+          .hamburger {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 1001;
+            width: 60px;
+            height: 60px;
+            padding: 1rem;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            //Hamburger Line
+            &>div {
+              position: relative;
+              flex: none;
+              width: 100%;
+              height: 2px;
+              background: green;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.4s ease;
+
+              // Hamburger Top & Bottom Lines
+              &:before,
+              &:after {
+                content: "";
+                position: absolute;
+                z-index: 1001;
+                top: -10px;
+                width: 100%;
+                height: 2px;
+                background: inherit;
+              }
+
+              &:after {
+                top: 10px;
+              }
+            }
+          }
+
+          // Toggler Animation
+          .toggler:checked+.hamburger>div {
+            transform: rotate(135deg);
+
+            // Turns Lines Into X
+            &:before,
+            &:after {
+              transform: rotate(90deg);
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Hero
+
+  #hero {
+    margin-top: 100px;
+    height: 100%;
+  }
+
+  // Our Services
+
+  #our-services {
+    .our-services-b {
+      .service-buckets {
+        grid-template-columns: 1fr;
+
+        div {
+          padding: 1rem 0;
+
+          &:nth-child(4) {
+            padding: 0 0;
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+
+    .our-services-a {
+      grid-template-columns: 1fr;
+
+      h2 {
+        font-size: 3.5rem;
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+      }
+
+      .btn {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  // Why Choose Us
+
+  #why-choose-us {
+    padding: 0 0;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    .why-choose-us-list {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      max-width: 90%;
+      padding-bottom: 0;
+    }
+
+
+  }
+
+  // Contact Us
+
+  #contact-us {
+    .top-leaf-container {
+      display: none;
+
+      .top-leaf {
+        display: none;
+      }
+    }
+
+    .contact-us-content {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text"
+        "form";
+      padding-top: 0;
+
+      .contact-us-text {
+        grid-area: text;
+        padding-top: 0;
+        padding: 5% 10%;
+      }
+
+      .form {
+        grid-area: form;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  // Main Footer
+  #main-footer {
+    height: 350px;
+
+    .footer-content {
+      padding-top: 2rem;
+      grid-template-columns: 1fr;
+
+      .footer-services {
+        display: none;
+      }
+
+      .footer-socials {
+        display: none;
+      }
+    }
+  }
+}

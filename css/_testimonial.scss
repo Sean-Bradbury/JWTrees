@@ -1,0 +1,93 @@
+#testimonials {
+  background: url(/img/Parts/home-row-background-2.jpg) repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  padding-top: 90px;
+  padding-bottom: 4rem;
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    width: 600px;
+    margin: auto;
+
+    .slide {
+      padding: 1rem 0;
+      height: 100%;
+      margin: auto;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      position: absolute;
+      top: 0;
+
+      &.current {
+        opacity: 1;
+      }
+
+      &.current .content {
+        opacity: 1;
+      }
+
+      .content {
+        position: absolute;
+        top: 0;
+        top: 1rem;
+        width: 600px;
+
+        p {
+          font-size: 1.2rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    padding-top: 2rem;
+
+    button {
+      background-color: transparent;
+      border: 2px solid #a2c046;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .fas {
+      color: #a2c046;
+      padding: 0.3rem;
+      background-color: transparent;
+    }
+
+    #prev {
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+
+    #next {
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  #testimonials {
+    .slider {
+      width: 90%;
+      height: 290px;
+
+      .slide {
+        width: 100%;
+
+        .content {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

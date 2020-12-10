@@ -1,0 +1,397 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Utilities
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 2.5rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+h4 {
+  color: #a2c046;
+  font-family: "Playball", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+h5 {
+  color: #3e3a3b;
+  font-family: "Abhaya Libre", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.25px;
+  text-transform: capitalize;
+}
+
+h2 {
+  color: #3e3a3b;
+  font-family: "Abhaya Libre", sans-serif;
+  font-size: 60px;
+  line-height: 56px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+p {
+  color: #665c5f;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &-light {
+    color: #333;
+    background: #fff;
+    border: 3px solid rgba(162, 192, 70, 0.35);
+
+    & a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background: #a2c046;
+      color: #fff;
+      border: 1px solid #fff;
+      transition: all 350ms;
+      transform: scale(1.05);
+
+      & a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Header
+header {
+  #main-nav {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
+    top: 0;
+
+    .nav-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 4rem;
+
+      .toggler {
+        display: none;
+      }
+
+      .logo {
+        height: 70px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        position: relative;
+        top: 30px;
+
+        li {
+          display: inline-block;
+          margin-left: 1rem;
+
+          a {
+            text-decoration: none;
+            color: rgb(175, 175, 175);
+            font-family: "Abhaya Libre", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 0.1rem;
+
+            &.active {
+              color: #08651A;
+            }
+          }
+        }
+      }
+
+      .fab {
+        color: green;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+// Hero
+#hero {
+  background: url(../img/Parts/Garden-HP-Hero.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  padding-top: 20%;
+
+  .hero-content {
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    height: 100%;
+
+    div {
+      .hero {
+        font-size: 35px;
+        color: #fff;
+        padding-bottom: 1rem;
+
+        &-lead {
+          font-size: 85px;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 2rem;
+    }
+
+    // .fas {
+    //   color: #fff;
+    //   background-color: transparent;
+    //   padding-top: 8rem;
+    //   display: block;
+    // }
+  }
+}
+
+// Our-Services
+#our-services {
+  margin-top: 1.5rem;
+
+  .our-services-a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      width: 80%;
+    }
+
+    h4 {
+      padding-top: 3rem;
+    }
+
+    p {
+      width: 50%;
+      padding-top: 2rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+
+  .our-services-b {
+    padding-top: 80px;
+    margin-top: 1.5rem;
+    position: relative;
+
+    .service-buckets {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+
+      img {
+        width: 100%;
+      }
+
+      h5 {
+        padding-top: 1rem;
+        text-align: left;
+        line-height: 1.6;
+      }
+
+      p {
+        text-align: left;
+        padding-top: 1rem;
+      }
+    }
+  }
+}
+
+// Why choose us
+#why-choose-us {
+  background: url(/img/Parts/home-row-background-2.jpg) repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  padding-top: 80px;
+  padding-bottom: 4rem;
+
+  .why-choose-us-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    grid-gap: 6rem;
+    max-width: 100%;
+    margin: 0 6rem;
+
+    div {
+      width: 100%;
+      padding: 0 15%;
+
+      li {
+        list-style-type: dot;
+        font-size: 1.5rem;
+        color: #ababab;
+      }
+
+      h5 {
+        text-align: left;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+#contact-us {
+  padding-top: 4rem;
+
+  .top-leaf-container {
+    margin: auto;
+    text-align: center;
+    height: 100px;
+
+    .top-leaf {
+      position: relative;
+      top: 35px;
+    }
+  }
+
+  .contact-us-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .contact-us-text {
+      padding: 1rem;
+      padding-top: 20%;
+    }
+
+    .form {
+      background: grey;
+      border: 5px solid #666;
+      padding: 25px;
+      height: 300px;
+      color: #fff;
+      height: 100%;
+      padding: 5% 10%;
+      padding-top: 10%;
+
+      label {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .text-fields input,
+      .text-fields textarea {
+        display: block;
+        width: 100%;
+        padding: 0.7rem;
+        margin: 0.5rem 0;
+      }
+
+      .btn {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+#main-footer {
+  background: url(/img/Parts/footer-image.jpg.crdownload);
+  height: 400px;
+  position: relative;
+
+  .footer-content {
+    padding-top: 100px;
+    display: grid;
+    grid-gap: 2rem;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+
+    p,
+    i {
+      color: #e5cfd6;
+    }
+
+    h5 {
+      color: #a2c046;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .footer-bottom {
+    height: 60px;
+    border-top: 1px solid #e5cfd6;
+    margin-top: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+
+    p {
+      padding-top: 20px;
+      color: #e5cfd6;
+    }
+  }
+}
+
+@import "testimonial";
+@import "mobile";
+@import "tablet";
+@import "widescreen";
