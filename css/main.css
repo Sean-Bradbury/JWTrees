@@ -357,7 +357,7 @@ header #main-nav .nav-content .fab {
 }
 
 #main-footer {
-  background: url(/img/Parts/footer-image.jpg.crdownload);
+  background: url(/img/Parts/footer-image.jpg);
   height: 400px;
   position: relative;
 }
@@ -377,7 +377,7 @@ header #main-nav .nav-content .fab {
 
 #main-footer .footer-content p,
 #main-footer .footer-content i {
-  color: #e5cfd6;
+  color: #ffffff;
 }
 
 #main-footer .footer-content h5 {
@@ -385,9 +385,13 @@ header #main-nav .nav-content .fab {
   padding-bottom: 1rem;
 }
 
+#main-footer .footer-content a {
+  color: #ffffff;
+}
+
 #main-footer .footer-bottom {
   height: 60px;
-  border-top: 1px solid #e5cfd6;
+  border-top: 1px solid #ffffff;
   margin-top: 1rem;
   width: 100%;
   position: absolute;
@@ -396,7 +400,7 @@ header #main-nav .nav-content .fab {
 
 #main-footer .footer-bottom p {
   padding-top: 20px;
-  color: #e5cfd6;
+  color: #ffffff;
 }
 
 #testimonials {

@@ -353,7 +353,7 @@ header {
 }
 
 #main-footer {
-  background: url(/img/Parts/footer-image.jpg.crdownload);
+  background: url(/img/Parts/footer-image.jpg);
   height: 400px;
   position: relative;
 
@@ -367,18 +367,22 @@ header {
 
     p,
     i {
-      color: #e5cfd6;
+      color: #ffffff;
     }
 
     h5 {
       color: #a2c046;
       padding-bottom: 1rem;
     }
+
+    a {
+      color: #ffffff;
+    }
   }
 
   .footer-bottom {
     height: 60px;
-    border-top: 1px solid #e5cfd6;
+    border-top: 1px solid #ffffff;
     margin-top: 1rem;
     width: 100%;
     position: absolute;
@@ -386,7 +390,7 @@ header {
 
     p {
       padding-top: 20px;
-      color: #e5cfd6;
+      color: #ffffff;
     }
   }
 }
