@@ -1,5 +1,5 @@
 // Smooth Scrolling
-$('.btn').on('click', function (event) {
+$('.btn-scroll').on('click', function (event) {
   if (this.hash !== '') {
     event.preventDefault();
 
