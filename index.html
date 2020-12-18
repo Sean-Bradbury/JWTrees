@@ -201,16 +201,17 @@
       </div>
       <div class="contact-us-content">
         <div class="form">
-          <form method="post">
+          <form name="contact" method="post" data-netlify="true">
+            <input type="hidden" name="contact" value="contact">
             <div class="text-fields">
               <label for="name">Your Name</label>
-              <input type="text" class="text-input name-input" name="name" id="name" />
+              <input required="true" type="text" class="text-input name-input" placeholder="Your Name" name="name" id="name" />
               <label for="email">Your Email</label>
-              <input type="email" class="text-input email-input" placeholder="Your Email" name="email" id="email" />
+              <input required="true" type="email" class="text-input email-input" placeholder="Your Email" name="email" id="email" />
               <label for="subject">Subject</label>
-              <input type="text" class="text-input subject-input" placeholder="Subject" name="subject" id="subject" />
+              <input required="true" type="text" class="text-input subject-input" placeholder="Subject" name="subject" id="subject" />
               <label for="message">Please enter your message</label>
-              <textarea name="message" class="text-input message-input" placeholder="Enter Message" name="message"
+              <textarea required="true" name="message" class="text-input message-input" placeholder="Enter Message" name="message"
                 id="message"></textarea>
             </div>
             <button type="submit" name="submit" class="btn btn-light">Submit</button>
