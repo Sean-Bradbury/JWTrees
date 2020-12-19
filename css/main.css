@@ -109,7 +109,7 @@ header #main-nav {
   position: fixed;
   background: #fff;
   width: 100%;
-  height: 80px;
+  height: 100px;
   z-index: 1000;
   -webkit-box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
           box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
@@ -127,16 +127,13 @@ header #main-nav .nav-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 rem;
-}
-
-header #main-nav .nav-content .toggler {
-  display: none;
+  margin: 0rem;
+  padding: 20px;
 }
 
 header #main-nav .nav-content .logo {
   height: 70px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 header #main-nav .nav-content ul {
@@ -518,6 +515,7 @@ header #main-nav .nav-content .fab {
             flex-direction: column;
     margin: 0;
     position: relative;
+    padding: 0;
   }
   header #main-nav .nav-content .logo {
     width: 180px;
@@ -743,7 +741,6 @@ header #main-nav .nav-content .fab {
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
   header #main-nav {
-    padding: 1rem;
     height: 100px;
   }
   header #main-nav .nav-content .fab {
@@ -751,7 +748,6 @@ header #main-nav .nav-content .fab {
   }
   header #main-nav .nav-content .logo {
     height: 55px;
-    margin-top: 10px;
   }
   header #main-nav .nav-content .nav {
     width: 100%;
@@ -779,7 +775,6 @@ header #main-nav .nav-content .fab {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    border: 1px solid red;
   }
   #our-services .our-services-a p {
     width: 90%;
