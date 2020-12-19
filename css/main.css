@@ -73,8 +73,9 @@ p {
 }
 
 .btn {
-  display: inline-block;
-  padding: 1rem 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-family: Georgia, serif;
   font-size: 1rem;
   font-weight: bold;
@@ -89,19 +90,42 @@ p {
 .btn-light a {
   color: #333;
   text-decoration: none;
+  padding: 1rem 1.2rem;
 }
 
 .btn-light:hover {
   background: #a2c046;
   color: #fff;
-  border: 1px solid #fff;
+  border: 3px solid #fff;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .btn-light:hover a {
+  color: #fff;
+}
+
+.btn-dark {
+  color: #fff;
+  background: #a2c046;
+  border: 3px solid rgba(162, 192, 70, 0.25);
+}
+
+.btn-dark a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.2rem;
+}
+
+.btn-dark:hover {
+  color: #fff;
+  border: 3px solid rgba(162, 192, 70, 0.25);
+  opacity: 0.9;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+.btn-dark:hover a {
   color: #fff;
 }
 
@@ -351,6 +375,8 @@ header #main-nav .nav-content .fab {
 
 #contact-us .contact-us-content .form .btn {
   margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
 }
 
 #main-footer {

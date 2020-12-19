@@ -74,8 +74,7 @@ p {
 }
 
 .btn {
-  display: inline-block;
-  padding: 1rem 2rem;
+  display: inline-flex;
   font-family: Georgia, serif;
   font-size: 1rem;
   font-weight: bold;
@@ -88,14 +87,37 @@ p {
     & a {
       color: #333;
       text-decoration: none;
+      padding: 1rem 1.2rem;
     }
 
     &:hover {
       background: #a2c046;
       color: #fff;
-      border: 1px solid #fff;
+      border: 3px solid #fff;
       transition: all 350ms;
-      transform: scale(1.05);
+
+      & a {
+        color: #fff;
+      }
+    }
+  }
+
+  &-dark {
+    color: #fff;
+    background: rgba(162, 192, 70, 1);
+    border: 3px solid rgba(162, 192, 70, 0.25);
+
+    & a {
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 1.2rem;
+    }
+
+    &:hover {
+      color: #fff;
+      border: 3px solid rgba(162, 192, 70, 0.25);
+      opacity: 0.9;
+      transition: all 350ms;
 
       & a {
         color: #fff;
@@ -344,6 +366,8 @@ header {
 
       .btn {
         margin-top: 1rem;
+        padding: 1rem 1.2rem;
+        cursor: pointer;
       }
     }
   }
