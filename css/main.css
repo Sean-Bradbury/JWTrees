@@ -127,7 +127,7 @@ header #main-nav .nav-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 4rem;
+  margin: 0 rem;
 }
 
 header #main-nav .nav-content .toggler {
@@ -507,7 +507,7 @@ header #main-nav .nav-content .fab {
     font-size: 1.5rem;
   }
   header #main-nav {
-    width: 100%;
+    width: 100vw;
     top: 0;
     height: 110px;
   }
@@ -517,14 +517,15 @@ header #main-nav .nav-content .fab {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0;
+    position: relative;
   }
   header #main-nav .nav-content .logo {
     width: 180px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 20px;
   }
   header #main-nav .nav-content ul {
     top: 0px;
@@ -537,53 +538,18 @@ header #main-nav .nav-content .fab {
     padding: 0.5rem;
     border-bottom: 1px dotted lightgray;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
   }
   header #main-nav .nav-content ul li:last-child {
     border: none;
   }
-  header #main-nav .nav-content .menu-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  header #main-nav .nav-content .menu-wrap .menu {
-    position: fixed;
-    top: 110px;
-    width: 100%;
-    height: 370px;
-    visibility: hidden;
-    overflow: hidden;
-    background: #fff;
-    -webkit-box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
-            box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
-    opacity: 0;
-    -webkit-transition: opacity 0.8s ease-in-out;
-    transition: opacity 0.8s ease-in-out;
-  }
-  header #main-nav .nav-content .menu-wrap .toggler {
-    display: inline-block;
+  header #main-nav .nav-content .hamburger {
     position: absolute;
     top: 30px;
-    left: 0;
-    z-index: 1002;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
-  }
-  header #main-nav .nav-content .menu-wrap .toggler:checked ~ .menu {
-    visibility: visible;
-    opacity: 1;
-  }
-  header #main-nav .nav-content .menu-wrap .hamburger {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    z-index: 1001;
-    width: 60px;
-    height: 60px;
+    right: 10px;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
     padding: 1rem;
     background: #fff;
     display: -webkit-box;
@@ -595,14 +561,17 @@ header #main-nav .nav-content .fab {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    opacity: 1;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
   }
-  header #main-nav .nav-content .menu-wrap .hamburger > div {
+  header #main-nav .nav-content .hamburger-line {
     position: relative;
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: green;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -615,31 +584,75 @@ header #main-nav .nav-content .fab {
             justify-content: center;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    opacity: 1;
   }
-  header #main-nav .nav-content .menu-wrap .hamburger > div:before, header #main-nav .nav-content .menu-wrap .hamburger > div:after {
+  header #main-nav .nav-content .hamburger-line:before, header #main-nav .nav-content .hamburger-line:after {
     content: "";
     position: absolute;
     z-index: 1001;
     top: -10px;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: inherit;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 1;
   }
-  header #main-nav .nav-content .menu-wrap .hamburger > div:after {
+  header #main-nav .nav-content .hamburger-line:after {
     top: 10px;
   }
-  header #main-nav .nav-content .menu-wrap .toggler:checked + .hamburger > div {
+  header #main-nav .nav-content .hamburger.active .hamburger-line {
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
-  header #main-nav .nav-content .menu-wrap .toggler:checked + .hamburger > div:before, header #main-nav .nav-content .menu-wrap .toggler:checked + .hamburger > div:after {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  header #main-nav .nav-content .hamburger.active .hamburger-line::before {
     top: 0;
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  header #main-nav .nav-content .hamburger.active .hamburger-line::after {
+    opacity: 0;
+  }
+  header #main-nav .nav-content .menu-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  header #main-nav .nav-content .menu-wrap .menu {
+    position: absolute;
+    top: 110px;
+    right: -100%;
+    width: 100vw;
+    height: 370px;
+    margin: 0;
+    visibility: hidden;
+    background: #fff;
+    -webkit-box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
+            box-shadow: 1px 3px rgba(0, 0, 0, 0.11);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  header #main-nav .nav-content .menu-wrap .menu .nav {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+  }
+  header #main-nav .nav-content .menu-wrap .menu.active {
+    visibility: visible;
+    right: 0;
   }
   #hero {
     margin-top: 100px;
     height: 100%;
+  }
+  #hero .hero-content div .hero-lead {
+    font-size: 4rem;
+    width: 100%;
   }
   #our-services .our-services-b .service-buckets {
     -ms-grid-columns: 1fr;
@@ -672,12 +685,20 @@ header #main-nav .nav-content .fab {
   #why-choose-us h2 {
     font-size: 3rem;
   }
-  #why-choose-us .why-choose-us-list {
+  #why-choose-us .container {
+    width: 100%;
+  }
+  #why-choose-us .container .why-choose-us-list {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 0;
-    max-width: 90%;
+    max-width: 100%;
     padding-bottom: 0;
+  }
+  #why-choose-us .container .why-choose-us-list div {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
   #contact-us .top-leaf-container {
     display: none;
@@ -720,7 +741,11 @@ header #main-nav .nav-content .fab {
   }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 768px) {
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+  header #main-nav {
+    padding: 1rem;
+    height: 100px;
+  }
   header #main-nav .nav-content .fab {
     display: none;
   }
@@ -736,8 +761,25 @@ header #main-nav .nav-content .fab {
     font-size: 0.75rem;
   }
   #hero {
+    padding-top: 100px;
     height: 65vh;
-    padding-top: 25%;
+    padding: 0;
+  }
+  #hero .container {
+    height: 100%;
+  }
+  #hero .container .hero-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    border: 1px solid red;
   }
   #our-services .our-services-a p {
     width: 90%;

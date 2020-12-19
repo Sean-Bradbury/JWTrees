@@ -1,6 +1,8 @@
-@media only screen and (min-width: 500px) and (max-width: 768px) {
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
   header {
     #main-nav {
+      padding: 1rem;
+      height: 100px;
       .nav-content {
         .fab {
           display: none;
@@ -28,8 +30,19 @@
   }
 
   #hero {
+    padding-top: 100px;
     height: 65vh;
-    padding-top: 25%;
+    padding: 0;
+    .container {
+      height: 100%;
+      .hero-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border: 1px solid red;
+      }
+    }
   }
 
   #our-services {
